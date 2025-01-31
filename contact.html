@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TravReps</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/all.css" rel="stylesheet" type="text/css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+    <div id="preloader"><div id="status">&nbsp;</div></div>
+
+    <div class="container shadow-sm">
+        <header class="d-flex flex-wrap fixed-top navbar-light bg-light justify-content-center py-1 px-3">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img class="mainlogo" src="images/logo.png">
+            </a>
+
+            <ul class="nav">
+                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="index.html#aboutus" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="bgcontact">
+        <div class="divider"></div>
+        <div class="caption" style="top: 35% !important;">
+            <!-- <span class="border">SCROLL DOWN</span> -->
+            <div class="imgforebox col-md-3 col-sm-6" style="padding: 10px 30px;">
+                <h1>Contact Us</h1>
+                <div class="headingunderline"></div>
+                <p class="my-2" style="color:#2e3192;"><i class="fas fa-map-marker-alt" style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;PO Box 122028, Dubai, UAE</span></p>
+                <p class="my-2" style="color:#2e3192;"><i class="fas fa-mobile-alt" style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;+971 50 473 1555</span></p>
+                <p class="my-2" style="color:#2e3192;"><i class="far fa-envelope" style="width: 24px;text-align: center;"></i>&nbsp;&nbsp;<a href="mailto:hello@travreps.com" style="color: #2e3192;">hello@travreps.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgpattern">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 p-4">
+                    <form action="contact.php" style="background-color: white; opacity: .8;" class="p-4 round">
+                        <div class="row">
+                            <div class="form-group mb-2 col-md-2 col-sm-4">
+                                <label for="txtTitle">Title</label>
+                                <select class="form-select" id="ddlTitle" name="title">
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Ms.">Ms.</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-2 col-md-5 col-sm-8">
+                                <label for="txtFirstName">First Name</label>
+                                <input type="text" class="form-control" id="txtFirstName" name="firstname" placeholder="First Name" autocomplete="disable">
+                            </div>
+                            <div class="form-group mb-2 col-md-5 col-sm-12">
+                                <label for="txtLastName">Last Name</label>
+                                <input type="text" class="form-control" id="txtLastName" name="lastname" placeholder="Last Name" autocomplete="disable">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-2 col-md-6 col-sm-12">
+                                <label for="txtDesignation">Designation</label>
+                                <input type="text" class="form-control" id="txtDesignation" name="designation" placeholder="Designation" autocomplete="disable">
+                            </div>
+                            <div class="form-group mb-2 col-md-6 col-sm-12">
+                                <label for="txtCompany">Company</label>
+                                <input type="text" class="form-control" id="txtCompany" name="company" placeholder="Company Name" autocomplete="disable">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-2 col-md-6 col-sm-12">
+                                <label for="txtCountry">Country</label>
+                                <input type="text" class="form-control" id="txtCountry" name="country" placeholder="Country" autocomplete="disable">
+                            </div>
+                            <div class="form-group mb-2 col-md-6 col-sm-12">
+                                <label for="txtCity">City</label>
+                                <input type="text" class="form-control" id="txtCity" name="city" placeholder="City" autocomplete="disable">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-2 col-md-2 col-sm-4">
+                                <label for="txtPhoneCode">Phone</label>
+                                <input type="number" class="form-control" id="txtPhoneCode" name="phonecode" placeholder="Country Code" autocomplete="disable">
+                            </div>
+                            <div class="form-group mb-2 col-md-4 col-sm-8">
+                                <label for="txtPhone">&nbsp;</label>
+                                <input type="number" class="form-control" id="txtPhone" name="phone" placeholder="Phone Number" autocomplete="disable">
+                            </div>
+                            <div class="form-group mb-2 col-md-6 col-sm-12">
+                                <label for="txtEmail">Email</label>
+                                <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Email Address" autocomplete="disable">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="form-group col-md-12">
+                                <label for="txtMessage">Message</label>
+                                <textarea class="form-control" id="txtMessage" name="message" placeholder="Enter you Message" autocomplete="disable"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-lg btn-primary" id="btnSubmit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="footer" class="footer">
+        
+        <div class="copyfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 text-start">
+                        © 2021 TravReps
+                    </div>
+                    <div class="col-4 text-center">
+                        A division of Cruise Master LLC, UAE
+                    </div>
+                    <div class="col-4 text-end">
+                        <a href="" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">PRIVACY POLICY</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 style="font-size: 1.1rem;">1. Your Personal Information</h4>
+                    <p>We only collect personal information where it is reasonably required to provide our services. This information may include name, address, email and telephone number. At times, certain financial information is also required. We may share this information with certain third parties to the extent it is necessary to provide our services.</p>
+                    <p>We may be required by law to disclose certain personally identifiable information. We are entitled to also disclose this information where the relevant person acts contrary to our interests or where their activities could cause harm to anyone.</p>
+                    <p>You may access most personal information we hold about you. To request access, please contact us via the manner set out below.</p>
+                    <h4 style="font-size: 1.1rem;">2. Data</h4>
+                    <p>We may record and use general information about site visitors for statistical purposes. This data does not contain any personally identifiable information. We may also use cookies to record site use information about your visit to our site and use of our newsletters. This helps us to improve our site and our services.</p>
+                    <h4 style="font-size: 1.1rem;">3. Security</h4>
+                    <p>We use various security measures to protect personally identifiable information of our customers. However, it is not possible to ensure that data transmission over the internet is totally secure.</p>
+                    <h4 style="font-size: 1.1rem;">4. Changes/Contacts</h4>
+                    <p>We may change this Privacy Policy from time to time without notice to you. If any changes are made, we will provide them in this section prior to their implementation. If you have any questions regarding our Privacy Policy, please contact us via email at <a href="mailto:hello@travreps.com">hello@travreps.com</a></p>
+                    <h4 style="font-size: 1.1rem;">5. General</h4>
+                    <p>References to “we”, “our” and “us” in this Privacy Policy are references to TravReps. References to “our site” or “this site” includes any related sites.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(window).on('load', function(){
+            $('#status').fadeOut();
+            $('#preloader').delay(350).fadeOut('slow');
+            $('body').delay(350).css('overflow','auto');  
+        });
+    </script>
+</body>
