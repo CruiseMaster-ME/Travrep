@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="en" ng-app="TravRepsApp">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TravReps - Global Alliances Simplified</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="-1"/>
-    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@300;500;700&display=swap"
         rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
@@ -20,14 +22,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body ng-controller="ctrlHome" ng-init="Get()">
-    <div id="preloader"><div id="status"><img src="images/loading-text-2.gif" /></div></div>
+    <div id="preloader">
+        <div id="status"><img src="images/loading-text-2.gif" /></div>
+    </div>
 
     <div class="container shadow-sm">
         <header class="d-flex flex-wrap navbar-light bg-light justify-content-center py-1 px-3">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 mb-xss-0 me-md-auto text-dark text-decoration-none">
+            <a href="/"
+                class="d-flex align-items-center mb-3 mb-md-0 mb-xss-0 me-md-auto text-dark text-decoration-none">
                 <img class="mainlogo" src="images/logo.png">
             </a>
 
@@ -35,7 +41,7 @@
                 <li class="nav-item"><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="#services" class="nav-link">Our Services</a></li>
                 <li class="nav-item"><a href="#aboutus" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="#footer" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
             </ul>
         </header>
     </div>
@@ -66,13 +72,16 @@
         <div class="container">
             <form class="row" name="subscribeForm" novalidate>
                 <div class="col-lg-5">
-                    <input type="text" class="form-control form-control-lg mb-1" id="txtSubName" ng-model="Sub.Name" placeholder="Enter Name" ng-required="true">
+                    <input type="text" class="form-control form-control-lg mb-1" id="txtSubName" ng-model="Sub.Name"
+                        placeholder="Enter Name" ng-required="true">
                 </div>
                 <div class="col-lg-5">
-                    <input type="email" class="form-control form-control-lg mb-1" id="txtSubEmail" ng-model="Sub.Email" placeholder="Enter Email Address" ng-required="true">
+                    <input type="email" class="form-control form-control-lg mb-1" id="txtSubEmail" ng-model="Sub.Email"
+                        placeholder="Enter Email Address" ng-required="true">
                 </div>
                 <div class="col-lg-2">
-                    <button type="submit" class="btn btn-custom w-100 mb-1" ng-disabled="subscribeForm.$invalid" ng-click="PostSubscribe()">Subscribe</button>
+                    <button type="submit" class="btn btn-custom w-100 mb-1" ng-disabled="subscribeForm.$invalid"
+                        ng-click="PostSubscribe()">Subscribe</button>
                 </div>
             </form>
         </div>
@@ -84,8 +93,10 @@
             <div class="imgforebox col-md-6 col-sm-12">
                 <h3>GLOBAL ALLIANCES SIMPLIFIED</h3>
                 <div class="headingunderline shadow"></div>
-                <p>With our key focus on the B2B segment, we offer the opportunity to enter regional markets, thereby boosting
-                    the potential to connect with the travel trade, whilst considering practical options, transparency, and
+                <p>With our key focus on the B2B segment, we offer the opportunity to enter regional markets, thereby
+                    boosting
+                    the potential to connect with the travel trade, whilst considering practical options, transparency,
+                    and
                     value.</p>
             </div>
         </div>
@@ -120,11 +131,14 @@
                     <div class="card cardbox">
                         <div class="card-body">
                             <h5 class="card-title">Marketing</h5>
-                            <p>To ensure optimum brand awareness and product visibility, we will manage the multiple facets
+                            <p>To ensure optimum brand awareness and product visibility, we will manage the multiple
+                                facets
                                 of
-                                marketing through tactics such as inclusion in sales collateral, periodic newsletters and
+                                marketing through tactics such as inclusion in sales collateral, periodic newsletters
+                                and
                                 e-blasts,
-                                social media coverage via our own platforms, dedicated page on the TravReps website and many
+                                social media coverage via our own platforms, dedicated page on the TravReps website and
+                                many
                                 more
                             </p>
                         </div>
@@ -134,10 +148,12 @@
                     <div class="card cardbox">
                         <div class="card-body">
                             <h5 class="card-title">Business Development</h5>
-                            <p>Conducted in tandem with our sales and marketing efforts, we analyse and improve operational
+                            <p>Conducted in tandem with our sales and marketing efforts, we analyse and improve
+                                operational
                                 procedures and practises to suit the Middle Eastern market. Given our experience, we can
                                 provide
-                                market intelligence and competitor analysis for optimum business expansion and new product
+                                market intelligence and competitor analysis for optimum business expansion and new
+                                product
                                 development</p>
                         </div>
                     </div>
@@ -146,7 +162,8 @@
                     <div class="card cardbox">
                         <div class="card-body">
                             <h5 class="card-title">Public Relations</h5>
-                            <p>An extension to marketing efforts, the focus on PR is to intensify the brand awareness and
+                            <p>An extension to marketing efforts, the focus on PR is to intensify the brand awareness
+                                and
                                 share of
                                 voice through close connections with the press. We can customise the PR campaign to suit
                                 KPIs, and
@@ -181,7 +198,8 @@
             <div class="imgforebox col-md-6 col-sm-12">
                 <h3>THE LEGACY</h3>
                 <div class="headingunderline shadow"></div>
-                <p>Following successes in representing cruise lines for over a decade, TravReps focuses on introducing
+                <p>Following successes in representing cruise lines for nearly two decades, TravReps focuses on
+                    introducing
                     other travel products relevant to the Middle Eastern market.</p>
                 <p>With our extensive knowledge, experience, and deep-rooted connections, we are your one-stop-shop for
                     establishing a brand and sustaining a thriving business in the region.</p>
@@ -211,74 +229,90 @@
             <div class="imgforebox col-md-6 col-sm-12">
                 <h3>GET IN TOUCH</h3>
                 <div class="headingunderline shadow"></div>
-                <p>We would love to hear from you. Write to us or give us a call and we can discuss on working together to grow your business.</p>
-                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="far fa-envelope" style="width: 24px;text-align: center;"></i>&nbsp;&nbsp;<a href="mailto:info@trav-reps.com" style="color: #2e3192;">info@trav-reps.com</a></p>
-                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="fas fa-mobile-alt" style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;+971 58 564 4737</span></p>
-                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="fas fa-map-marker-alt" style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;PO Box 122028, Dubai, UAE</span></p>
-            </div>  
-        </div>  
+                <p>We would love to hear from you. Write to us or give us a call and we can discuss on working together
+                    to grow your business.</p>
+                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="far fa-envelope"
+                        style="width: 24px;text-align: center;"></i>&nbsp;&nbsp;<a href="mailto:info@trav-reps.com"
+                        style="color: #2e3192;">info@trav-reps.com</a></p>
+                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="fab fa-whatsapp"
+                        style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;+971 58 564 4737</span></p>
+                <p class="my-2" style="color:#2e3192;font-weight: bolder;"><i class="fas fa-map-marker-alt"
+                        style="width: 24px;text-align: center;"></i><span>&nbsp;&nbsp;PO Box 122028, Dubai, UAE</span>
+                </p>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
-        <a class="anchor" id="footer"></a>
+        <a class="anchor" id="contactus"></a>
         <div class="bgpattern">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 px-4 py-5">
                         <div class="p-4 round contactForm">
-                            <h3>Please fill out the quick form</h3>
+                            <h3>We will contact you!</h3>
                             <div class="headingunderline shadow"></div>
                             <form name="contactForm" novalidate>
                                 <div class="row">
                                     <div class="form-group mb-2 col-md-6 col-sm-8">
                                         <label for="txtFirstName">First Name<span>*</span></label>
-                                        <input type="text" class="form-control" id="txtFirstName" ng-model="Contact.FirstName" autocomplete="disable" ng-required="true">
+                                        <input type="text" class="form-control" id="txtFirstName"
+                                            ng-model="Contact.FirstName" autocomplete="disable" ng-required="true">
                                     </div>
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtLastName">Last Name<span>*</span></label>
-                                        <input type="text" class="form-control" id="txtLastName" ng-model="Contact.LastName" autocomplete="disable" ng-required="true">
+                                        <input type="text" class="form-control" id="txtLastName"
+                                            ng-model="Contact.LastName" autocomplete="disable" ng-required="true">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtDesignation">Designation</label>
-                                        <input type="text" class="form-control" id="txtDesignation" ng-model="Contact.Designation" autocomplete="disable">
+                                        <input type="text" class="form-control" id="txtDesignation"
+                                            ng-model="Contact.Designation" autocomplete="disable">
                                     </div>
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtCompany">Company<span>*</span></label>
-                                        <input type="text" class="form-control" id="txtCompany" ng-model="Contact.Company" autocomplete="disable" ng-required="true">
+                                        <input type="text" class="form-control" id="txtCompany"
+                                            ng-model="Contact.Company" autocomplete="disable" ng-required="true">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtCountry">Country<span>*</span></label>
-                                        <select class="form-select" id="ddlCountries" ng-model="Contact.Country" ng-options="x as x.name for x in Countries" ng-required="true">
+                                        <select class="form-select" id="ddlCountries" ng-model="Contact.Country"
+                                            ng-options="x as x.name for x in Countries" ng-required="true">
                                             <option value="">Select Country</option>
                                         </select>
                                     </div>
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtCity">City<span>*</span></label>
-                                        <input type="text" class="form-control" id="txtCity" ng-model="Contact.City" autocomplete="disable" ng-required="true">
+                                        <input type="text" class="form-control" id="txtCity" ng-model="Contact.City"
+                                            autocomplete="disable" ng-required="true">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-2 col-md-2 col-sm-4">
                                         <label for="txtPhoneCode">Phone</label>
-                                        <input type="text" class="form-control" readonly ng-readonly="true" id="txtPhoneCode" ng-model="Contact.Country.code" autocomplete="disable">
+                                        <input type="text" class="form-control" readonly ng-readonly="true"
+                                            id="txtPhoneCode" ng-model="Contact.Country.code" autocomplete="disable">
                                     </div>
                                     <div class="form-group mb-2 col-md-4 col-sm-8">
                                         <label for="txtPhone">&nbsp;</label>
-                                        <input type="number" class="form-control" id="txtPhone" ng-model="Contact.Phone" autocomplete="disable">
+                                        <input type="number" class="form-control" id="txtPhone" ng-model="Contact.Phone"
+                                            autocomplete="disable">
                                     </div>
                                     <div class="form-group mb-2 col-md-6 col-sm-12">
                                         <label for="txtEmail">Email<span>*</span></label>
-                                        <input type="email" class="form-control" id="txtEmail" ng-model="Contact.Email" autocomplete="disable" ng-required="true">
+                                        <input type="email" class="form-control" id="txtEmail" ng-model="Contact.Email"
+                                            autocomplete="disable" ng-required="true">
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="form-group col-md-12">
                                         <label for="txtMessage">Message<span>*</span></label>
-                                        <textarea class="form-control" id="txtMessage" ng-model="Contact.Message" autocomplete="disable" ng-required="true"></textarea>
+                                        <textarea class="form-control" id="txtMessage" ng-model="Contact.Message"
+                                            autocomplete="disable" ng-required="true"></textarea>
                                     </div>
                                 </div>
                                 <div class="row mb-2">
@@ -289,7 +323,9 @@
                                 </div>
                                 <div class="row mb-2">
                                     <div class="form-group col-md-12">
-                                        <input type="submit" ng-disabled="contactForm.$invalid" class="btn btn-lg btn-custom" id="btnSubmit" ng-click="PostContact()" value="Submit"></input>
+                                        <input type="submit" ng-disabled="contactForm.$invalid"
+                                            class="btn btn-lg btn-custom" id="btnSubmit" ng-click="PostContact()"
+                                            value="Submit"></input>
                                     </div>
                                 </div>
                             </form>
@@ -303,10 +339,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 text-start">
-                        © 2021 TravReps
+                        © 2025 TravReps FZ LLC.
                     </div>
                     <div class="col-4 text-center">
-                        A division of Cruise Master LLC, UAE
+                        <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none mx-2" style="font-size: 18px;">
+                            <i class="fab fa-linkedin"></i> 
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="text-decoration-none mx-2" style="font-size: 18px;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
                     </div>
                     <div class="col-4 text-end">
                         <a href="" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
@@ -326,24 +367,40 @@
                 </div>
                 <div class="modal-body">
                     <h4 style="font-size: 1.1rem;">1. Your Personal Information</h4>
-                    <p>We only collect personal information where it is reasonably required to provide our services. This information may include name, address, email and telephone number. At times, certain financial information is also required. We may share this information with certain third parties to the extent it is necessary to provide our services.</p>
-                    <p>We may be required by law to disclose certain personally identifiable information. We are entitled to also disclose this information where the relevant person acts contrary to our interests or where their activities could cause harm to anyone.</p>
-                    <p>You may access most personal information we hold about you. To request access, please contact us via the manner set out below.</p>
+                    <p>We only collect personal information where it is reasonably required to provide our services.
+                        This information may include name, address, email and telephone number. At times, certain
+                        financial information is also required. We may share this information with certain third parties
+                        to the extent it is necessary to provide our services.</p>
+                    <p>We may be required by law to disclose certain personally identifiable information. We are
+                        entitled to also disclose this information where the relevant person acts contrary to our
+                        interests or where their activities could cause harm to anyone.</p>
+                    <p>You may access most personal information we hold about you. To request access, please contact us
+                        via the manner set out below.</p>
                     <h4 style="font-size: 1.1rem;">2. Data</h4>
-                    <p>We may record and use general information about site visitors for statistical purposes. This data does not contain any personally identifiable information. We may also use cookies to record site use information about your visit to our site and use of our newsletters. This helps us to improve our site and our services.</p>
+                    <p>We may record and use general information about site visitors for statistical purposes. This data
+                        does not contain any personally identifiable information. We may also use cookies to record site
+                        use information about your visit to our site and use of our newsletters. This helps us to
+                        improve our site and our services.</p>
                     <h4 style="font-size: 1.1rem;">3. Security</h4>
-                    <p>We use various security measures to protect personally identifiable information of our customers. However, it is not possible to ensure that data transmission over the internet is totally secure.</p>
+                    <p>We use various security measures to protect personally identifiable information of our customers.
+                        However, it is not possible to ensure that data transmission over the internet is totally
+                        secure.</p>
                     <h4 style="font-size: 1.1rem;">4. Changes/Contacts</h4>
-                    <p>We may change this Privacy Policy from time to time without notice to you. If any changes are made, we will provide them in this section prior to their implementation. If you have any questions regarding our Privacy Policy, please contact us via email at <a href="mailto:info@travreps.com">info@travreps.com</a></p>
+                    <p>We may change this Privacy Policy from time to time without notice to you. If any changes are
+                        made, we will provide them in this section prior to their implementation. If you have any
+                        questions regarding our Privacy Policy, please contact us via email at <a
+                            href="mailto:info@trav-reps.com">info@trav-reps.com</a></p>
                     <h4 style="font-size: 1.1rem;">5. General</h4>
-                    <p>References to “we”, “our” and “us” in this Privacy Policy are references to TravReps. References to “our site” or “this site” includes any related sites.</p>
+                    <p>References to “we”, “our” and “us” in this Privacy Policy are references to TravReps. References
+                        to “our site” or “this site” includes any related sites.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Subscribe Success Modal -->
-    <div class="modal cusmodal fade" id="subscribeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="subscribeModalTitle" aria-hidden="true">
+    <div class="modal cusmodal fade" id="subscribeModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" role="dialog" aria-labelledby="subscribeModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-body p-5">
@@ -359,7 +416,8 @@
     </div>
 
     <!-- Subscribe Success Modal -->
-    <div class="modal cusmodal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
+    <div class="modal cusmodal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-0">
                 <div class="modal-body p-5">
@@ -375,17 +433,19 @@
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-sanitize.min.js"></script>
     <script src="js/angular-recaptcha.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        $(window).on('load', function(){
+        $(window).on('load', function () {
             $('#status').fadeOut();
             $('#preloader').delay(350).fadeOut('slow');
-            $('body').delay(350).css('overflow','auto');
+            $('body').delay(350).css('overflow', 'auto');
             $('header').delay(350).addClass('fixed-top');
         });
 
@@ -398,4 +458,5 @@
         });
     </script>
 </body>
+
 </html>
