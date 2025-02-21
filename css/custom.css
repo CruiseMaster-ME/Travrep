@@ -359,6 +359,7 @@ option {
     margin: -150px 0 0 -150px;
     /* is width and height divided by two */
     text-align: center;
+    background-size: contain;
  }
 
  #status img {

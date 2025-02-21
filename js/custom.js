@@ -63,7 +63,7 @@ app.controller('ctrlHome', function ($scope, $http, $window, vcRecaptchaService,
     };
 
     $scope.PostContact = function() {
-        if (vcRecaptchaService.getResponse() === "") { // Check if CAPTCHA is resolved
+        if (vcRecaptchaService.getResponse() === "") { 
             console.log("Please resolve the captcha and submit!");
             $scope.CaptchaValidationMsg = "Please resolve the captcha and submit!";
         } else {
@@ -82,10 +82,10 @@ app.controller('ctrlHome', function ($scope, $http, $window, vcRecaptchaService,
     
             console.log(data);
             
-            // Validate input fields
+         
             if ($scope.Contact.FirstName && $scope.Contact.LastName && $scope.Contact.Email) {
-                emailjs.init("-_GUT_0LLY9yh509r"); // Initialize EmailJS with your public key
-    
+                emailjs.init("-_GUT_0LLY9yh509r"); 
+
                 var templateParams = {
                     first_name: $scope.Contact.FirstName,
                     last_name: $scope.Contact.LastName,
