@@ -3,11 +3,11 @@ name: Deploy HTML to IIS
 on:
   push:
     branches:
-      - main  # Trigger when pushing to main branch
+      - main
 
 jobs:
   deploy:
-    runs-on: windows-latest  # Windows runner to allow IIS commands
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
@@ -19,8 +19,10 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: "./"   # deploy everything in repo root
-          server-dir: "/"   # IIS root (adjust if needed)
+          port: 21
+          protocol: ftp     # explicitly set to FTP
+          local-dir: "./"   # or "public/" if your HTML files are inside a folder
+          server-dir: "/"   # adjust if IIS expects /wwwroot/ or similar
 
       - name: Restart IIS
         run: |
