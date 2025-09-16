@@ -1,0 +1,28 @@
+name: Deploy HTML to IIS
+
+on:
+  push:
+    branches:
+      - main  # Trigger when pushing to main branch
+
+jobs:
+  deploy:
+    runs-on: windows-latest  # Windows runner to allow IIS commands
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to IIS via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: "./"   # deploy everything in repo root
+          server-dir: "/"   # IIS root (adjust if needed)
+
+      - name: Restart IIS
+        run: |
+          iisreset /restart
+        shell: cmd
