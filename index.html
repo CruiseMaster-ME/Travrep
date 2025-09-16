@@ -62,31 +62,6 @@
         </div>
     </div>
 
-    <div class="section2 bgpattern">
-        <div class="row">
-            <div class="col-lg-12 text-center" style="margin-bottom: 20px;">
-                <h3 style="text-transform: uppercase;">Stay updated with our latest news</h3>
-                <div class="headingunderline-center shadow"></div>
-            </div>
-        </div>
-        <div class="container">
-            <form class="row" name="subscribeForm" novalidate>
-                <div class="col-lg-5">
-                    <input type="text" class="form-control form-control-lg mb-1" id="txtSubName" ng-model="Sub.Name"
-                        placeholder="Enter Name" ng-required="true">
-                </div>
-                <div class="col-lg-5">
-                    <input type="email" class="form-control form-control-lg mb-1" id="txtSubEmail" ng-model="Sub.Email"
-                        placeholder="Enter Email Address" ng-required="true">
-                </div>
-                <div class="col-lg-2">
-                    <button type="submit" class="btn btn-custom w-100 mb-1" ng-disabled="subscribeForm.$invalid"
-                        ng-click="PostSubscribe()">Subscribe</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <div id="home" class="bgimg-global">
         <div class="divider"></div>
         <div class="caption" style="top: 35% !important;">
@@ -223,7 +198,7 @@
         </ul>
     </div>
 
-    <div id="contact" class="bgimg-contact">
+    <!-- <div id="contact" class="bgimg-contact">
         <div class="divider"></div>
         <div class="caption" style="top: 40% !important;">
             <div class="imgforebox col-md-6 col-sm-12">
@@ -241,17 +216,20 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="footer">
         <a class="anchor" id="contactus"></a>
-        <div class="bgpattern">
+        <div class="bgimg-contact">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 px-4 py-5">
                         <div class="p-4 round contactForm">
-                            <h3>We will contact you!</h3>
+                            <h3>GET IN TOUCH</h3>
                             <div class="headingunderline shadow"></div>
+                            <p>We would love to hear from you. Write to us or give us a call and we can discuss on
+                                working together
+                                to grow your business.</p>
                             <form name="contactForm" novalidate>
                                 <div class="row">
                                     <div class="form-group mb-2 col-md-6 col-sm-8">
@@ -334,6 +312,30 @@
                 </div>
             </div>
         </div>
+            <div class="section2 bgpattern">
+        <div class="row">
+            <div class="col-lg-12 text-center" style="margin-bottom: 20px;">
+                <h3 style="text-transform: uppercase;">Stay updated with our latest news</h3>
+                <div class="headingunderline-center shadow"></div>
+            </div>
+        </div>
+        <div class="container">
+            <form class="row" name="subscribeForm" novalidate>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control form-control-lg mb-1" id="txtSubName" ng-model="Sub.Name"
+                        placeholder="Enter Name" ng-required="true">
+                </div>
+                <div class="col-lg-5">
+                    <input type="email" class="form-control form-control-lg mb-1" id="txtSubEmail" ng-model="Sub.Email"
+                        placeholder="Enter Email Address" ng-required="true">
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-custom w-100 mb-1" ng-disabled="subscribeForm.$invalid"
+                        ng-click="PostSubscribe()">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
         <div class="copyfooter">
             <div class="container">
@@ -342,10 +344,12 @@
                         © 2025 TravReps FZ LLC.
                     </div>
                     <div class="col-4 text-center">
-                        <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none mx-2" style="font-size: 18px;">
-                            <i class="fab fa-linkedin"></i> 
+                        <a href="https://www.linkedin.com" target="_blank" class="text-decoration-none mx-2"
+                            style="font-size: 18px;">
+                            <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://www.facebook.com" target="_blank" class="text-decoration-none mx-2" style="font-size: 18px;">
+                        <a href="https://www.facebook.com" target="_blank" class="text-decoration-none mx-2"
+                            style="font-size: 18px;">
                             <i class="fab fa-facebook"></i>
                         </a>
                     </div>
